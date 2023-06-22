@@ -1,31 +1,31 @@
+import { Card, Desrciption, Image, Name,  Tag, Location, Stats, StatsItem, StatsLabel, StatsValue} from './Profile.styled';
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div class="profile">
-      <div class="description">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
+    <Card>
+      <Desrciption>
+        <Image
+          src={avatar}
           alt="User avatar"
-          class="avatar"
         />
-        <p class="name">{username}</p>
-        <p class="tag">{tag}</p>
-        <p class="location">{location}</p>
-      </div>
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Desrciption>
 
-      <ul class="stats">
-        <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{stats.followers}</span>
-        </li>
-        <li>
-          <span class="label">Views</span>
-          <span class="quantity">{stats.views}</span>
-        </li>
-        <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+      <Stats>
+        <StatsItem>
+          <StatsLabel class="label">Followers</StatsLabel>
+          <StatsValue class="quantity">{stats.followers}</StatsValue>
+        </StatsItem>
+        <StatsItem>
+          <StatsLabel class="label">Views</StatsLabel>
+          <StatsValue class="quantity">{stats.views}</StatsValue>
+        </StatsItem>
+        <StatsItem>
+          <StatsLabel class="label">Likes</StatsLabel>
+          <StatsValue class="quantity">{stats.likes}</StatsValue>
+        </StatsItem>
+      </Stats>
+    </Card>
   );
 };
