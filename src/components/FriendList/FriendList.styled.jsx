@@ -12,7 +12,6 @@ export const FriendsList = styled.ul`
 
 export const FriendItem = styled.li`
   padding: 8px;
-  width: 100%;
   display: flex;
   justify-content: start;
   align-items: center;
