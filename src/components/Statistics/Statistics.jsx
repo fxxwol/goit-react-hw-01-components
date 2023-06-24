@@ -8,7 +8,7 @@ export const Statistics = ({ title, stats }) => {
       <StatList>
         {stats.map(stat => {
           return (
-            <StatItem length={stats.length} key={stat.id}>
+            <StatItem key={stat.id}>
               <Text >{stat.label}</Text>
               <Text >{stat.percentage}</Text>
             </StatItem>
